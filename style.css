@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "header" "nav" "article" "aside" "footer";
+  grid-template-rows: 15vh 100vh 10vh;
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-template-areas: "header header header header header" "nav nav article article aside" "footer footer footer footer footer";
+  }
+}
+
+header {
+  grid-area: header;
+  background-color: #faf8f1;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #faeab1;
+  font-family: "Noto Serif", serif;
+  text-align: center;
+  list-style: none;
+}
+
+.images {
+  width: 350px;
+  margin-left: -80p;
+}
+
+article {
+  grid-area: article;
+  background-color: #e5ba73;
+  font-family: "Noto Serif", serif;
+}
+
+.image {
+  width: 350px;
+  margin-left: 200px;
+}
+
+h3 {
+  text-align: center;
+  text-size-adjust: 200px; /*Hvorfor virker denne ikke?*/
+  text-shadow: #faf8f1; /*Hvorfor virker denne ikke?*/
+}
+
+aside {
+  grid-area: aside;
+  background-color: #c58940;
+  font-family: "Noto Serif", serif;
+  text-align: center;
+  list-style: none;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #c58955;
+  font-family: "Noto Serif", serif;
+  text-align: center;
+}
+
+/* font-family: 'Fjalla One', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Oxygen', sans-serif;*/
